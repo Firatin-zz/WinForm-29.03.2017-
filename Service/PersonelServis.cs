@@ -25,7 +25,7 @@ namespace Service
             bag.BaglantiKapat();
           
             return 0;
-        }
+        } 
 
         public List<PersonelDTO> personelListesi(string sqlCumlesi)
         {
