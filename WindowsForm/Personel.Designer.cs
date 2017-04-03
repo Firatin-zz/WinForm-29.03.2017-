@@ -36,6 +36,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.dgvPersonelListe = new System.Windows.Forms.DataGridView();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.cmbPersonel = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonelListe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,9 +92,9 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(200, 96);
+            this.btnKaydet.Location = new System.Drawing.Point(138, 95);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(75, 23);
+            this.btnKaydet.Size = new System.Drawing.Size(65, 24);
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
@@ -104,12 +107,45 @@
             this.dgvPersonelListe.Name = "dgvPersonelListe";
             this.dgvPersonelListe.Size = new System.Drawing.Size(440, 150);
             this.dgvPersonelListe.TabIndex = 4;
+            this.dgvPersonelListe.SelectionChanged += new System.EventHandler(this.dgvPersonelListe_SelectionChanged);
+            // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(209, 95);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(65, 24);
+            this.btnSil.TabIndex = 5;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Location = new System.Drawing.Point(282, 95);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(65, 24);
+            this.btnGuncelle.TabIndex = 6;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // cmbPersonel
+            // 
+            this.cmbPersonel.FormattingEnabled = true;
+            this.cmbPersonel.Location = new System.Drawing.Point(354, 13);
+            this.cmbPersonel.Name = "cmbPersonel";
+            this.cmbPersonel.Size = new System.Drawing.Size(121, 21);
+            this.cmbPersonel.TabIndex = 7;
+            this.cmbPersonel.SelectedIndexChanged += new System.EventHandler(this.cmbPersonel_SelectedIndexChanged);
             // 
             // Personel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 338);
+            this.Controls.Add(this.cmbPersonel);
+            this.Controls.Add(this.btnGuncelle);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.dgvPersonelListe);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.dtpTarih);
@@ -137,6 +173,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.DataGridView dgvPersonelListe;
+        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.ComboBox cmbPersonel;
     }
 }
 
